@@ -29,7 +29,6 @@ This project utilizes **machine learning & deep learning** techniques to classif
 - **277,524 image patches (50x50 px)**
 - Used for **cancerous vs. non-cancerous classification**
 
-🔹 **[Download Dataset](https://drive.google.com/your-link-here)**
 
 ---
 
