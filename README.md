@@ -1,73 +1,81 @@
-# 🩺 Breast Cancer Detection Using AI & Deep Learning
 
-## 📌 Overview
-This project utilizes **machine learning & deep learning** techniques to classify breast cancer images. It applies **image enhancement, segmentation, and classification** using the **CBIS-DDSM** and **Breast Histopathology Images** datasets.
+# Breast Cancer Detection Using Machine Learning and Deep Learning
 
-## 🚀 Features
-- **Image Enhancement**: Median Blur, Sharpening, CLAHE
-- **Image Segmentation**: Watershed Algorithm & Canny Edge Detection
-- **Image Classification**: CNN-based Model (99.67% Accuracy)
-- **Data Visualization**: Histograms & Bar Graphs for CBIS-DDSM Data
-- **Cancerous & Non-Cancerous Detection** using Histopathology Images
+This is a **near-exact rebuild package** of your original project based on the recovered source files.
+It preserves your original code modules, notebook, algorithms, configuration, and expected project layout.
 
-## 🛠️ Technologies Used
-- **Python, TensorFlow, Keras, OpenCV**
-- **Deep Learning Models: CNN**
-- **Datasets: CBIS-DDSM & Breast Histopathology Images**
-- **Visualization: Matplotlib, Pandas**
-- **Jupyter Notebook for Development**
+## What is included
+- Original recovered Python files:
+  - `train.py`
+  - `predict.py`
+  - `config.py`
+  - `data_loader.py`
+  - `enhancement.py`
+  - `segmentation.py`
+  - `model.py`
+  - `visualization.py`
+  - `breast_cancer_detection.ipynb`
+- A `utils.py` compatibility file so the original imports work
+- Pre-created folders for datasets, trained models, and outputs
+- Helper scripts for setup and training
 
----
+## What is NOT included
+The following were **not present in the uploaded files**, so they are not bundled here:
+- Original raw datasets
+- Trained `.keras` model files
+- Large output images generated during training
 
-## 📂 Dataset Information
-### **1. CBIS-DDSM (Curated Breast Imaging Subset of DDSM)**
-- **5GB Dataset** containing **Mammograms**
-- Used for **single image classification** (enhancement, segmentation & classification)
+## Expected dataset folders
+Place your datasets here exactly:
 
-### **2. Breast Histopathology Images**
-- 162 whole-mount slide images scanned at **40x magnification**
-- **277,524 image patches (50x50 px)**
-- Used for **cancerous vs. non-cancerous classification**
+```text
+/data/cbis_ddsm/
+/data/histopathology/
+```
 
+## Expected trained model files
+After training, these files should exist in `/models/`:
+- `cnn_histopathology.keras`
+- `cnn_watershed.keras`
+- `cnn_canny.keras`
 
----
+## Quick start
 
-## ⚡ Workflow
-### **1️⃣ Image Enhancement**
-✅ **Techniques Applied**:  
-- **ROI Extraction** → Focuses on tumor regions  
-- **Median Blur Filter** → Removes salt & pepper noise  
-- **Sharpening Filter** → Enhances image clarity  
-- **CLAHE (Contrast-Limited Adaptive Histogram Equalization)** → Increases contrast  
-
-### **2️⃣ Image Segmentation**
-✅ **Methods Used**:
-- **Watershed Algorithm** → Separates foreground & background  
-- **Canny Edge Detection** → Identifies edges of tumors  
-
-### **3️⃣ Image Classification**
-✅ **CNN Architecture (Trained Model)**
-- **Watershed Segmented Image** → 99.67% Accuracy  
-- **Canny Edge Segmented Image** → 97.82% Accuracy  
-
----
-
-## 📊 Results & Visualizations
-🔹 **Full Mammograms, Cropped & ROI Mask Images**  
-🔹 **Malignant vs. Benign Tumors - Data Distribution**  
-🔹 **Histopathology Image Classification (92.80% Accuracy)**  
-🔹 **Bar Graphs & Pie Charts for Dataset Analysis**  
-
----
-
-## 🔧 Installation & Setup
+### 1. Create environment
 ```bash
-# Clone Repository
-git clone https://github.com/yourusername/Breast-Cancer-Detection.git
-cd Breast-Cancer-Detection
-
-# Install Dependencies
 pip install -r requirements.txt
+```
 
-# Run the Model
-python train.py
+### 2. Put datasets in the expected folders
+- CBIS-DDSM → `data/cbis_ddsm/`
+- Breast Histopathology Images → `data/histopathology/`
+
+### 3. Train models
+```bash
+python train.py --mode all
+```
+
+### 4. Run prediction
+```bash
+python predict.py --image path/to/image.png --type histo
+python predict.py --image path/to/image.png --type mammogram
+```
+
+### 5. Demo mode without datasets
+```bash
+python train.py --mode demo
+python predict.py --demo --type histo
+python predict.py --demo --type mammogram
+```
+
+## Files added in this rebuild
+- `utils.py` — compatibility re-export file for your original imports
+- `scripts/setup_folders.py` — recreates folder layout if needed
+- `scripts/train_all.bat` — Windows helper script
+- `scripts/run_demo.bat` — Windows helper script
+- `docs/dataset_setup.md` — where to place datasets and expected files
+- `docs/original_readme_snapshot.md` — preserved original README text
+
+## Original README snapshot
+Your original README content has been preserved in:
+`docs/original_readme_snapshot.md`
