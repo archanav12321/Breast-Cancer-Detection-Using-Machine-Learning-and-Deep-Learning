@@ -81,7 +81,9 @@ This project demonstrates how deep learning can assist in early breast cancer de
 ### Segmentation / Prediction Output
 ![Result](assets/images/results.PNG)
 
+These visualizations illustrate the complete pipeline from raw medical images to final classification predictions.
 ---
+
 
 ## 📂 Datasets Used
 
