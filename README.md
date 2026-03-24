@@ -40,6 +40,9 @@ This project applies computer vision and deep learning techniques to classify br
 The pipeline includes preprocessing, segmentation, feature extraction, and CNN-based classification to improve cancer detection accuracy.
 
 ---
+## 🌍 Real-World Impact
+
+This project demonstrates how deep learning can assist in early breast cancer detection, supporting faster diagnosis and improving clinical decision-making in healthcare systems.
 
 ## ⚙️ Workflow
 
