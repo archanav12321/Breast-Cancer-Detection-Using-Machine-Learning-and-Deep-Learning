@@ -1,4 +1,4 @@
-# 🩺 Breast Cancer Detection Using AI & Deep Learning
+# 🩺 # 🩺 Breast Cancer Detection Using AI (CNN-Based Medical Imaging Pipeline)
 
 AI-powered breast cancer detection system using image enhancement, segmentation (Watershed & Canny), and CNN-based classification achieving up to **99.67% accuracy**.
 
