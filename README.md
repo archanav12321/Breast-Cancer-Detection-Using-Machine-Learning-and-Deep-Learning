@@ -73,10 +73,10 @@ The pipeline includes preprocessing, segmentation, feature extraction, and CNN-b
 ## 📊 Sample Outputs
 
 ### Workflow
-![Workflow](assets/images/workflow.png)
+![Workflow](assets/images/workflow.PNG)
 
 ### Segmentation / Prediction Output
-![Result](assets/images/results.png)
+![Result](assets/images/results.PNG)
 
 ---
 
