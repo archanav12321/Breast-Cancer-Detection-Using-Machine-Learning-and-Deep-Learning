@@ -1,81 +1,137 @@
+# 🩺 Breast Cancer Detection Using AI & Deep Learning
 
-# Breast Cancer Detection Using Machine Learning and Deep Learning
+AI-powered breast cancer detection system using image enhancement, segmentation (Watershed & Canny), and CNN-based classification achieving up to **99.67% accuracy**.
 
-This is a **near-exact rebuild package** of your original project based on the recovered source files.
-It preserves your original code modules, notebook, algorithms, configuration, and expected project layout.
+> This project presents an end-to-end deep learning pipeline for analyzing mammogram and histopathology images to detect cancerous patterns using computer vision and CNN models.
 
-## What is included
-- Original recovered Python files:
-  - `train.py`
-  - `predict.py`
-  - `config.py`
-  - `data_loader.py`
-  - `enhancement.py`
-  - `segmentation.py`
-  - `model.py`
-  - `visualization.py`
-  - `breast_cancer_detection.ipynb`
-- A `utils.py` compatibility file so the original imports work
-- Pre-created folders for datasets, trained models, and outputs
-- Helper scripts for setup and training
+---
 
-## What is NOT included
-The following were **not present in the uploaded files**, so they are not bundled here:
-- Original raw datasets
-- Trained `.keras` model files
-- Large output images generated during training
+## 💡 Key Highlights
 
-## Expected dataset folders
-Place your datasets here exactly:
+- End-to-end deep learning pipeline for medical image analysis  
+- Image enhancement + segmentation + classification workflow  
+- Achieved up to **99.67% accuracy** on segmented images  
+- Modular and scalable code structure  
+- Designed for real-world healthcare AI applications  
 
-```text
-/data/cbis_ddsm/
-/data/histopathology/
+---
+
+## 📁 Project Structure
+
+```bash
+src/                # Core ML pipeline (preprocessing, segmentation, training, prediction)
+notebooks/          # Jupyter notebooks for experimentation and analysis
+assets/images/      # Workflow diagrams and sample outputs
+requirements.txt    # Project dependencies
+README.md           # Project documentation
 ```
 
-## Expected trained model files
-After training, these files should exist in `/models/`:
-- `cnn_histopathology.keras`
-- `cnn_watershed.keras`
-- `cnn_canny.keras`
+The project is structured to separate core ML logic, experimentation, and outputs for better scalability and maintainability.
 
-## Quick start
+---
 
-### 1. Create environment
+## 🚀 Overview
+
+This project applies computer vision and deep learning techniques to classify breast cancer images using:
+
+- **CBIS-DDSM** mammogram dataset  
+- **Breast Histopathology Images** dataset  
+
+The pipeline includes preprocessing, segmentation, feature extraction, and CNN-based classification to improve cancer detection accuracy.
+
+---
+
+## ⚙️ Workflow
+
+### 1️⃣ Image Enhancement
+- ROI Extraction  
+- Median Blur Filter  
+- Sharpening Filter  
+- CLAHE (Contrast Enhancement)  
+
+### 2️⃣ Image Segmentation
+- Watershed Algorithm  
+- Canny Edge Detection  
+
+### 3️⃣ Feature Extraction
+- CNN layers extract important patterns from processed images  
+
+### 4️⃣ Classification
+- Benign vs. Malignant  
+- Cancerous vs. Non-Cancerous  
+
+---
+
+## 📊 Results
+
+- **99.67% accuracy** → Watershed segmented images  
+- **97.82% accuracy** → Canny edge segmented images  
+- **92.80% accuracy** → Histopathology classification  
+
+---
+
+## 📊 Sample Outputs
+
+### Workflow
+![Workflow](assets/images/workflow.png)
+
+### Segmentation / Prediction Output
+![Result](assets/images/results.png)
+
+---
+
+## 📂 Datasets Used
+
+### 1. CBIS-DDSM
+- Curated Breast Imaging Subset of DDSM  
+- Approx. **5 GB dataset**  
+- Used for enhancement, segmentation, and classification  
+
+### 2. Breast Histopathology Images
+- **162** whole-slide images  
+- **277,524** image patches  
+- **50x50 px resolution**  
+- Used for cancerous vs. non-cancerous classification  
+
+---
+
+## 🛠️ Technologies Used
+
+- Python  
+- TensorFlow / Keras  
+- OpenCV  
+- CNN (Convolutional Neural Networks)  
+- Pandas, NumPy  
+- Matplotlib  
+- Jupyter Notebook  
+
+---
+
+## ⚡ How to Run
+
 ```bash
 pip install -r requirements.txt
+python src/train.py
+python src/predict.py
 ```
 
-### 2. Put datasets in the expected folders
-- CBIS-DDSM → `data/cbis_ddsm/`
-- Breast Histopathology Images → `data/histopathology/`
+---
 
-### 3. Train models
-```bash
-python train.py --mode all
-```
+## 🔮 Future Improvements
 
-### 4. Run prediction
-```bash
-python predict.py --image path/to/image.png --type histo
-python predict.py --image path/to/image.png --type mammogram
-```
+- Deploy as a full-stack web application  
+- Add real-time image upload and prediction  
+- Improve dataset balancing and augmentation  
+- Add model explainability (Grad-CAM, saliency maps)  
+- Optimize model performance and inference speed  
 
-### 5. Demo mode without datasets
-```bash
-python train.py --mode demo
-python predict.py --demo --type histo
-python predict.py --demo --type mammogram
-```
+---
 
-## Files added in this rebuild
-- `utils.py` — compatibility re-export file for your original imports
-- `scripts/setup_folders.py` — recreates folder layout if needed
-- `scripts/train_all.bat` — Windows helper script
-- `scripts/run_demo.bat` — Windows helper script
-- `docs/dataset_setup.md` — where to place datasets and expected files
-- `docs/original_readme_snapshot.md` — preserved original README text
+## 👩‍💻 Author
 
-## Original README snapshot
-Your original README content has been preserved in:
-`docs/original_readme_snapshot.md`
+**Archana Vellingiri Raja**  
+Full-Stack Developer | AI/ML Engineer | Cloud Engineer  
+
+- 🌐 Portfolio: https://archanav-portfolio.vercel.app/  
+- 💼 LinkedIn: https://linkedin.com/in/archanav99  
+- 📧 Email: archana999v@gmail.com  
